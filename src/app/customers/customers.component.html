@@ -1,33 +1,29 @@
 <h2>My Customers</h2>
+<div class="row">
+  <div class="col-sm-3">
 <ul class="customers">
   <li *ngFor="let customer of customers"
       [class.selected]="customer === selectedCustomer"
       (click)="onSelect(customer)">
-    <span class="badge">{{customer.id}}</span> {{customer.name}}
+    <span class="badge">{{customer.firstName}} {{customer.lastName}}</span>
   </li>
 </ul>
-
+  </div>
+  <div class="col-sm-6">
 <div *ngIf="selectedCustomer">
-
+  <img src="../assets/img/ferrari_f40.jpg" alt="Flowers in Chania">
   <h2>{{selectedCustomer.firstName | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedCustomer.id}}</div>
+  <div><span><b>id:</b> </span>{{selectedCustomer.id}}</div>
+  <div><span><b>First name:</b> </span>{{selectedCustomer.firstName}}</div>
+  <div><span><b>Last name:</b> </span>{{selectedCustomer.lastName}}</div>
   <div>
-    <label>First name:
-      <input [(ngModel)]="selectedCustomer.firstName" placeholder="firstname">
-    </label>
-  </div>
-
-  <div>
-    <label>Last name:
-      <input [(ngModel)]="selectedCustomer.lastName" placeholder="lastname">
-    </label>
-  </div>
-
-  <div>
-    <label>Car:
+    <label><b>Car:</b>
       <input [(ngModel)]="selectedCustomer.car" placeholder="car">
     </label>
   </div>
 
+</div>
+
+</div>
 
 </div>
