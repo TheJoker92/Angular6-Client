@@ -1,0 +1,40 @@
+<div *ngIf="customer">
+  <table text-align="left">
+    <tr>
+      <td>
+  <img src="../assets/img/ferrari_f40.jpg" alt="Flowers in Chania" width="100%">
+      </td>
+    </tr>
+    <tr>
+      <td>
+  <h2>{{customer.firstName | uppercase}} Details</h2>
+      </td>
+    </tr>
+    <tr>
+    <td>
+
+      <div><span><b>id:</b> </span>{{customer.id}}</div>
+    </td>
+    </tr>
+    <tr>
+      <td>
+      <div><span><b>First name:</b> </span>{{customer.firstName}}</div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      <div><span><b>Last name:</b> </span>{{customer.lastName}}</div>
+      </td>
+    </tr>
+    <tr>
+    <td>
+    <div>
+      <label><b>Car:</b>
+        <input [(ngModel)]="customer.car" placeholder="car">
+      </label>
+    </div>
+    </td>
+    </tr>
+  </table>
+</div>
+

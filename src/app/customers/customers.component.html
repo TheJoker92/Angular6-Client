@@ -10,20 +10,6 @@
 </ul>
   </div>
   <div class="col-sm-6">
-<div *ngIf="selectedCustomer">
-  <img src="../assets/img/ferrari_f40.jpg" alt="Flowers in Chania">
-  <h2>{{selectedCustomer.firstName | uppercase}} Details</h2>
-  <div><span><b>id:</b> </span>{{selectedCustomer.id}}</div>
-  <div><span><b>First name:</b> </span>{{selectedCustomer.firstName}}</div>
-  <div><span><b>Last name:</b> </span>{{selectedCustomer.lastName}}</div>
-  <div>
-    <label><b>Car:</b>
-      <input [(ngModel)]="selectedCustomer.car" placeholder="car">
-    </label>
-  </div>
-
+    <app-customer-detail [customer]="selectedCustomer"></app-customer-detail>
 </div>
-
-</div>
-
 </div>
